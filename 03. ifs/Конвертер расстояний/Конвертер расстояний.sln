@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Конвертер расстояний", "Конвертер расстояний\Конвертер расстояний.csproj", "{04828D3D-6EE5-41E4-92B1-9E12C5378C2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04828D3D-6EE5-41E4-92B1-9E12C5378C2E}.Debug|x86.ActiveCfg = Debug|x86
+		{04828D3D-6EE5-41E4-92B1-9E12C5378C2E}.Debug|x86.Build.0 = Debug|x86
+		{04828D3D-6EE5-41E4-92B1-9E12C5378C2E}.Release|x86.ActiveCfg = Release|x86
+		{04828D3D-6EE5-41E4-92B1-9E12C5378C2E}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
