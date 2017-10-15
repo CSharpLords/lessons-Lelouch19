@@ -21,14 +21,17 @@ namespace ConsoleApplication1
             }
             else
             {
-                if (b >= c && b >= c)
+                if (b >= c && b >= a)
                 {
                     Console.WriteLine("Наибольшее число " + b);
                 }
-
-                if (c >= b && c >= a)
+                else
                 {
-                    Console.WriteLine("Наибольшее число " + c);
+
+                    if (c >= b && c >= a)
+                    {
+                        Console.WriteLine("Наибольшее число " + c);
+                    }
                 }
             }
             Console.ReadLine();
