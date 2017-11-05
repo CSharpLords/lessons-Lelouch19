@@ -10,12 +10,6 @@ namespace Quest {
         static void Main(string[] args)
         {
             YouSuperhero();
-            Site();
-            HelloKapchaMonster();
-            SecretCode();
-            ReallyExample();
-            GoodbyeKapchaMonster();
-            Victory();
         }
         static void ShowInvalid()
         {
@@ -46,10 +40,12 @@ namespace Quest {
             {
                 Console.WriteLine("Конец игры! Ты просидел в Доте до утра, и принцессу спас другой хакер");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else if (answer1 == 2)
             {
+                Site();
             }
             else
             {
@@ -73,23 +69,25 @@ namespace Quest {
             {
                 Console.WriteLine("Конец игры! Проигрыш - другой хакер спас принцессу");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else if (answer2 == 2)
             {
                 Console.WriteLine("Конец игры! Проигрыш - игрок заразился тем же вирусом, что и принцесса, застрял на том же сайте со сломанным компьютером");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else if (answer2 == 3)
             {
-             
+                HelloKapchaMonster();
             }
             else
             {
                 ShowInvalid();
             }
-
+            
            
         }
         static void HelloKapchaMonster()
@@ -107,22 +105,25 @@ namespace Quest {
             {
                 Console.WriteLine("Конец игры! Проигрыш - другой хакер спас принцессу");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else if (answer3 == 2)
             {
-                
+                SecretCode();
             }
             else if (answer3 == 3)
             {
                 Console.WriteLine("Конец игры! Проигрыш - было бы слишком легко выиграть! На самом деле там невидимые скобки - это и есть супер-способность Капча-Монстра! Задание выглядит как (2 + 2) * 2");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else
             {
                 ShowInvalid();
             }
+           
         }
         static void SecretCode()
         {
@@ -139,22 +140,25 @@ namespace Quest {
             {
                 Console.WriteLine("Конец игры! Проигрыш - принцесса заблудилась во Всемирной Сети, пока герой ковырялся не там, где надо");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else if (answer4 == 2)
             {
                 Console.WriteLine("Конец игры! Проигрыш - зря, что ли, подвох находил??");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else if (answer4 == 3)
             {
-                
+                ReallyExample();
             }
             else
             {
                 ShowInvalid();
             }
+            
         }
         static void ReallyExample()
         {
@@ -168,18 +172,20 @@ namespace Quest {
             Console.WriteLine();
             if (answer5 == 1)
             {
-               
+                GoodbyeKapchaMonster();
             }
             else if (answer5 == 2)
             {
                 Console.WriteLine("Конец игры! Проигрыш - другой хакер спас принцессу");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else
             {
                 ShowInvalid();
             }
+            
         }
         static void GoodbyeKapchaMonster()
         {
@@ -195,16 +201,18 @@ namespace Quest {
             {
                 Console.WriteLine("Конец игры! Проигрыш - у нее сломался компьютер, она не может получить твой файл! Принцессу спасает другой хакер");
                 Console.ReadLine();
+                NewGame();
                 Environment.Exit(0);
             }
             else if (answer6 == 2)
             {
-               
+                Victory();
             }
             else
             {
                 ShowInvalid();
             }
+          
 
         }
         static void Victory()
@@ -213,6 +221,24 @@ namespace Quest {
             Console.WriteLine("Ура!!! Победа! Ты успешно справился со всеми испытаниями и спас принцессу!");
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ReadLine();
+            NewGame();
         }
+        static void NewGame()
+        {
+            Console.WriteLine("Хотите начать заново?");
+            string answer = Console.ReadLine().ToLower();
+            if (answer == "да")
+            {
+                Console.Clear();
+                YouSuperhero();
+            }
+            if (answer == "нет")
+            {
+                Console.WriteLine("Как хотите");
+                Console.ReadLine();
+            }
+        }
+    
+
     }
 }
