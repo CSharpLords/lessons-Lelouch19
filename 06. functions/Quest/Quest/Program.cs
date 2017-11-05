@@ -13,9 +13,10 @@ namespace Quest {
         }
         static void ShowInvalid()
         {
-            Console.ForegroundColor = ConsoleColor.Blue;
+            Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("Введен невалидный вариант! Конец игры");
             Console.ReadLine();
+            NewGame();
             Environment.Exit(0);
         }
         static void ShowOptions(string Options)
@@ -99,6 +100,7 @@ namespace Quest {
             ShowOptions("1. А, ну ее, математика для нубов! Пойду в Доту поиграю!");
             ShowOptions("2. Проверить исходный код Капча-Монстра");
             ShowOptions("3. Ответить монстру: 6");
+            ShowOptions("4. Да кто такой этот Капча-Монстр?!Попытаюсь хакнуть его.");
             int answer3 = int.Parse(Console.ReadLine());
             Console.WriteLine();
             if (answer3 == 1)
@@ -119,11 +121,55 @@ namespace Quest {
                 NewGame();
                 Environment.Exit(0);
             }
+            else if(answer3 == 4)
+            {
+               AboutKapchaMonster();
+            }
             else
             {
                 ShowInvalid();
             }
            
+        }
+        static void AboutKapchaMonster()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Вам удалось взломать Капча-Монстра,но как вы поступите теперь?");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            ShowOptions("1. Буду использовать его в своих целях!");
+            ShowOptions("2. Уничтожу его,чтобы другие принцесы не попадались на эту ловушку!");
+            int answer7 = int.Parse(Console.ReadLine());
+            if (answer7 == 1)
+            {
+                YourKapchaMoster();
+            }
+            else if(answer7 == 2)
+            {
+                DestroyKapchaMonster();
+            }
+            else
+            {
+                ShowInvalid();
+            }
+        }
+        static void YourKapchaMoster()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Вы взломали множество компьютер с помощью Капча-Монстра.Но вскоре вас заметил другой хакер и взломал монстра!Всё что остаётся,это исправиться и принести лекарство принцессе.");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            Thread.Sleep(1500);
+            Victory();
+        }
+        static void DestroyKapchaMonster()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Поздравляю,вы уничтожили монстра и спасли многих юзеров интернета!Теперь отнесите лекарство принцессе!");
+            Console.ForegroundColor = ConsoleColor.Gray;
+            Console.WriteLine();
+            Thread.Sleep(1500);
+            Victory();
         }
         static void SecretCode()
         {
@@ -195,6 +241,7 @@ namespace Quest {
             Console.WriteLine();
             ShowOptions("1.Отправить лекарство принцессе по почте и пойти в Доту");
             ShowOptions("2.Записать лекарство на флешку и пойти к принцессе домой");
+            ShowOptions("3 Перекинуть лекарство на внешний жёсткий диск о отправиться к принцессе");
             int answer6 = int.Parse(Console.ReadLine());
             Console.WriteLine();
             if (answer6 == 1)
@@ -205,6 +252,10 @@ namespace Quest {
                 Environment.Exit(0);
             }
             else if (answer6 == 2)
+            {
+                Victory();
+            }
+            else if (answer6 == 3)
             {
                 Victory();
             }
@@ -234,11 +285,10 @@ namespace Quest {
             }
             if (answer == "нет")
             {
-                Console.WriteLine("Как хотите");
+                Console.WriteLine();
+                Console.WriteLine("Зря,очень зря");
                 Console.ReadLine();
             }
         }
-    
-
     }
 }
