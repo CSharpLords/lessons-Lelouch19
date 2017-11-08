@@ -15,9 +15,9 @@ namespace Quest {
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
             Console.WriteLine("Введен невалидный вариант! Конец игры");
+            Console.WriteLine("Количество хп - " + (Hp - 100) + "   Мораль - " + Morality);
             Console.ReadLine();
             NewGame();
-            Environment.Exit(0);
         }
         static void ShowOptions(string Options)
         {
@@ -29,6 +29,7 @@ namespace Quest {
             Console.ForegroundColor = ConsoleColor.Red;
             Thread.Sleep(500);
             Console.WriteLine("Ты - супергерой. Твоя задача - вызволить принцессу из плена Всемирной Сети, куда она попала, по неосторожности ткнув в рекламный баннер. Выбери действие:");
+            Console.WriteLine("Количество хп - " + Hp  +  "   Мораль - " + Morality);
 
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Gray;
@@ -39,10 +40,7 @@ namespace Quest {
             Console.WriteLine();
             if (answer1 == 1)
             {
-                Console.WriteLine("Конец игры! Ты просидел в Доте до утра, и принцессу спас другой хакер");
-                Console.ReadLine();
-                NewGame();
-                Environment.Exit(0);
+                Dota2();
             }
             else if (answer1 == 2)
             {
@@ -59,6 +57,7 @@ namespace Quest {
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Оказывается, принцессе пришло письмо с рекламой суперстойкой помады, и там был баннер со ссылкой на сайт dontclickme.noob.");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + (Morality + 25));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
             ShowOptions("1. Послушаться совета в адресе сайта и поиграть в Доту");
@@ -68,14 +67,12 @@ namespace Quest {
             Console.WriteLine();
             if (answer2 == 1)
             {
-                Console.WriteLine("Конец игры! Проигрыш - другой хакер спас принцессу");
-                Console.ReadLine();
-                NewGame();
-                Environment.Exit(0);
+                Dota2();
             }
             else if (answer2 == 2)
             {
                 Console.WriteLine("Конец игры! Проигрыш - игрок заразился тем же вирусом, что и принцесса, застрял на том же сайте со сломанным компьютером");
+                Console.WriteLine("Количество хп - " + (Hp - 100) + "   Мораль - " + (Morality + 25));
                 Console.ReadLine();
                 NewGame();
                 Environment.Exit(0);
@@ -95,6 +92,7 @@ namespace Quest {
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Игрок встречает противника - Капча-Монстра, который не дает обновить антивирус. Чтобы его победить, нужно решить задачку: сколько будет 2 + 2 * 2?");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + (Morality + 50));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
             ShowOptions("1. А, ну ее, математика для нубов! Пойду в Доту поиграю!");
@@ -105,10 +103,7 @@ namespace Quest {
             Console.WriteLine();
             if (answer3 == 1)
             {
-                Console.WriteLine("Конец игры! Проигрыш - другой хакер спас принцессу");
-                Console.ReadLine();
-                NewGame();
-                Environment.Exit(0);
+                Dota2();
             }
             else if (answer3 == 2)
             {
@@ -117,6 +112,7 @@ namespace Quest {
             else if (answer3 == 3)
             {
                 Console.WriteLine("Конец игры! Проигрыш - было бы слишком легко выиграть! На самом деле там невидимые скобки - это и есть супер-способность Капча-Монстра! Задание выглядит как (2 + 2) * 2");
+                Console.WriteLine("Количество хп - " + (Hp - 100) + "   Мораль - " + (Morality + 50));
                 Console.ReadLine();
                 NewGame();
                 Environment.Exit(0);
@@ -135,6 +131,7 @@ namespace Quest {
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Вам удалось взломать Капча-Монстра,но как вы поступите теперь?");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + (Morality + 50));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
             ShowOptions("1. Буду использовать его в своих целях!");
@@ -142,7 +139,7 @@ namespace Quest {
             int answer7 = int.Parse(Console.ReadLine());
             if (answer7 == 1)
             {
-                YourKapchaMoster();
+                BadEnd();
             }
             else if(answer7 == 2)
             {
@@ -153,19 +150,23 @@ namespace Quest {
                 ShowInvalid();
             }
         }
-        static void YourKapchaMoster()
+        static void BadEnd()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Вы взломали множество компьютер с помощью Капча-Монстра.Но вскоре вас заметил другой хакер и взломал монстра!Всё что остаётся,это исправиться и принести лекарство принцессе.");
-            Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
-            Thread.Sleep(1500);
-            Victory();
+            Thread.Sleep(500);
+            Console.WriteLine("Вы взломали множество компьютер с помощью Капча-Монстра.Но вскоре вас заметил другой хакер и взломал монстра!Конец игры.");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + Morality );
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            NewGame();
         }
         static void DestroyKapchaMonster()
         {
             Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine();
             Console.WriteLine("Поздравляю,вы уничтожили монстра и спасли многих юзеров интернета!Теперь отнесите лекарство принцессе!");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + (Morality + 75));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
             Thread.Sleep(1500);
@@ -175,6 +176,7 @@ namespace Quest {
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Игрок вскрывает код Капча-Монстра и видит, что тот печатает черным цветом некоторые символы. Ух ты! Их не видно на черном фоне!");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + (Morality + 75));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
             ShowOptions("1. Круто, пойду попробую так в своей программе!");
@@ -185,6 +187,7 @@ namespace Quest {
             if (answer4 == 1)
             {
                 Console.WriteLine("Конец игры! Проигрыш - принцесса заблудилась во Всемирной Сети, пока герой ковырялся не там, где надо");
+                Console.WriteLine("Количество хп - " + (Hp - 100) + "   Мораль - " + (Morality + 50));
                 Console.ReadLine();
                 NewGame();
                 Environment.Exit(0);
@@ -192,6 +195,7 @@ namespace Quest {
             else if (answer4 == 2)
             {
                 Console.WriteLine("Конец игры! Проигрыш - зря, что ли, подвох находил??");
+                Console.WriteLine("Количество хп - " + (Hp - 100) + "   Мораль - " + (Morality + 75));
                 Console.ReadLine();
                 NewGame();
                 Environment.Exit(0);
@@ -210,6 +214,7 @@ namespace Quest {
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Капча-Монстра хрипит консольными командами, догружается, наконец, до конца и выдает: сколько будет (2 + 2) * 2?");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + (Morality + 100));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
             ShowOptions("1. Ответить монстру: 8");
@@ -222,10 +227,7 @@ namespace Quest {
             }
             else if (answer5 == 2)
             {
-                Console.WriteLine("Конец игры! Проигрыш - другой хакер спас принцессу");
-                Console.ReadLine();
-                NewGame();
-                Environment.Exit(0);
+                Dota2();
             }
             else
             {
@@ -237,6 +239,7 @@ namespace Quest {
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Капча-Монстр обиженно сопит \"Как ты догадался? Я же спрятал скобки!\", отступает и позволяет обновить антивирус. Теперь герой защищен, и может перейти на сайт! Едва он делает это, как получает сообщение антивируса: Замечена и заблокирована вредоносная программа: WinLock 1.0. Файл-лекарство можно найти здесь: C:Antiviruscure.exe.");
+            Console.WriteLine("Количество хп - " + Hp  + "   Мораль - " + (Morality + 100));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.WriteLine();
             ShowOptions("1.Отправить лекарство принцессе по почте и пойти в Доту");
@@ -246,10 +249,10 @@ namespace Quest {
             Console.WriteLine();
             if (answer6 == 1)
             {
-                Console.WriteLine("Конец игры! Проигрыш - у нее сломался компьютер, она не может получить твой файл! Принцессу спасает другой хакер");
+                Console.WriteLine("Конец игры! Проигрыш - у нее сломался компьютер, она не может получить твой файл! Принцессу спасает другой хакер,а Дота удалилась с компа.Это фиаско");
+                Console.WriteLine("Количество хп - " + (Hp - 100) + "   Мораль - " + (Morality + 50));
                 Console.ReadLine();
                 NewGame();
-                Environment.Exit(0);
             }
             else if (answer6 == 2)
             {
@@ -268,11 +271,45 @@ namespace Quest {
         }
         static void Victory()
         {
-            Console.ForegroundColor = ConsoleColor.Red;
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
             Console.WriteLine("Ура!!! Победа! Ты успешно справился со всеми испытаниями и спас принцессу!");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + (Morality + 100));
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ReadLine();
             NewGame();
+        }
+        static void Dota2()
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Thread.Sleep(500);
+            Console.WriteLine("Вот ты и в дотке.Какого героя выберешь?");
+            Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + Morality);
+
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Gray;
+            ShowOptions("1. Пудж");
+            ShowOptions("2. Рики");
+            int answer9 = int.Parse(Console.ReadLine());
+            if (answer9 == 1)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Ты слил катку и не спас принцессу.Конец игры");
+                Console.WriteLine("Количество хп - " + (Hp - 100) + "   Мораль - " + Morality);
+                Console.ReadLine();
+                NewGame();
+            }
+            else if(answer9 == 2)
+            {
+                Console.WriteLine();
+                Console.WriteLine("Ты затащил катку,но не спас принцессу.");
+                Console.WriteLine("Количество хп - " + Hp + "   Мораль - " + Morality);
+                Console.ReadLine();
+                NewGame();
+            }
+            else
+            {
+                ShowInvalid();
+            }
         }
         static void NewGame()
         {
@@ -289,6 +326,17 @@ namespace Quest {
                 Console.WriteLine("Зря,очень зря");
                 Console.ReadLine();
             }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine();
+                Console.WriteLine("Ответ неясен,но скорее всего вы имели в виду - да.");
+                Console.ReadLine();
+                Console.Clear();
+                YouSuperhero();
+            }
         }
+        static int Hp = 100;
+        static int Morality = 0;
     }
 }
