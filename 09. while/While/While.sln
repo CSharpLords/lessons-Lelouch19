@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "While", "While\While.csproj", "{F8467D99-F4C5-4C0C-B5E1-6911548CE6C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8467D99-F4C5-4C0C-B5E1-6911548CE6C7}.Debug|x86.ActiveCfg = Debug|x86
+		{F8467D99-F4C5-4C0C-B5E1-6911548CE6C7}.Debug|x86.Build.0 = Debug|x86
+		{F8467D99-F4C5-4C0C-B5E1-6911548CE6C7}.Release|x86.ActiveCfg = Release|x86
+		{F8467D99-F4C5-4C0C-B5E1-6911548CE6C7}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
