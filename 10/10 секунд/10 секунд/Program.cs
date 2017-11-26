@@ -11,17 +11,13 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             int time = 0;
-            while (true) 
+            while (time < 10) 
             {
                 Thread.Sleep(1000);
                 time = time + 1;
                 Console.WriteLine(time);
-                if (time == 10)
-                {
-                    break;
-                }
             }
-                    Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }
