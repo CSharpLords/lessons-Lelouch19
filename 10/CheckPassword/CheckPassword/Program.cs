@@ -4,30 +4,37 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CheckPassword {
+namespace CheckPassword 
+{
 	class Program {
-		static void Main(string[] args) {
+		static void Main(string[] args) 
+        {
 			string password = "Супер пароль!";
-            while (true) {
+            int trying = 0;
+            while (trying < 5) 
+            {
                 Console.WriteLine("Чтобы пользоваться моей программой, введи пароль!");
                 string answer = Console.ReadLine();
 
-                if (answer == password) {
+                if (answer == password) 
+                {
                     Console.WriteLine("Ок, правильно. Жми Enter, чтобы пройти!");
                     Console.ReadLine();
                     Console.Clear();
 
                     StartProgram();
                 }
-                else {
+                else 
+                {
                     Console.WriteLine("Неправильно! Хаха, ты не пройдешь!");
                     Console.ReadLine();
-                    Environment.Exit(0);
+                    trying = trying + 1;
                 }
             }
 		}
 
-		static void StartProgram() {
+		static void StartProgram() 
+        {
 			Quest quest = new Quest();
 		}
 	}
