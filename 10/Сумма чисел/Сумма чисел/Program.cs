@@ -19,8 +19,7 @@ namespace ConsoleApplication1
                 SumNumber = SumNumber + n;
 
             }
-            Console.WriteLine("Сумма чисел - " + SumNumber
-                );  
+            Console.WriteLine("Сумма чисел - " + SumNumber);  
             Console.ReadLine();
         }
     }
