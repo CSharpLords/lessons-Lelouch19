@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Поиск буквы 'и'", "Поиск буквы 'и'\Поиск буквы 'и'.csproj", "{C1F5560C-A04A-44B5-ABC1-4A853BEA294C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C1F5560C-A04A-44B5-ABC1-4A853BEA294C}.Debug|x86.ActiveCfg = Debug|x86
+		{C1F5560C-A04A-44B5-ABC1-4A853BEA294C}.Debug|x86.Build.0 = Debug|x86
+		{C1F5560C-A04A-44B5-ABC1-4A853BEA294C}.Release|x86.ActiveCfg = Release|x86
+		{C1F5560C-A04A-44B5-ABC1-4A853BEA294C}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
