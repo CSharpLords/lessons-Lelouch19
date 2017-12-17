@@ -16,7 +16,8 @@ namespace CarLine {
 
 		private int carX = 200;
 		private int speed = 2;
-		public Form1() {
+		public Form1() 
+        {
 			InitializeComponent();
 
 			SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.DoubleBuffer, true);
@@ -28,12 +29,23 @@ namespace CarLine {
 			graphics = e.Graphics;
 			graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
-			graphics.Clear(Color.FromArgb(0x44444400));
-			DrawCar(carX, 200);
+            int n = 0;
+            int x = 200;
+            int c = 0;
+            graphics.Clear(Color.FromArgb(0x44444400));
+            while (n <= 14)
+            {
+                DrawCar(carX + (c * 10), x);
+                n = n + 1;
+                x = x + 35;
+                c = c + 1;
+                
+            }
 		}
 
-		private void DrawCar(int x, int y) {
-			graphics.DrawImage(img, x, y);
+		private void DrawCar(int x, int y) 
+        {
+            graphics.DrawImage(img, x, y);
 		}
 
 		private void Form1_KeyPress(object sender, KeyEventArgs e) {
