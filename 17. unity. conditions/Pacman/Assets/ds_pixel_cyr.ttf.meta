@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 60136abd40384844382a8e1c107962d0
+timeCreated: 1518339424
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DS Pixel Cyr
+  fontNames:
+  - DS Pixel Cyr
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
