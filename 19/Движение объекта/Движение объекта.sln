@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Движение объекта", "Assembly-CSharp-firstpass.csproj", "{CA74C7FD-A90C-2413-C483-65E62888B28B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Движение объекта", "Assembly-CSharp.csproj", "{4C1C4067-A884-5233-1840-428F8EC6B0B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Движение объекта", "Assembly-CSharp-Editor-firstpass.csproj", "{46EC48A6-B1DA-9AA7-2195-4ED441C67571}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA74C7FD-A90C-2413-C483-65E62888B28B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA74C7FD-A90C-2413-C483-65E62888B28B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA74C7FD-A90C-2413-C483-65E62888B28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA74C7FD-A90C-2413-C483-65E62888B28B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C1C4067-A884-5233-1840-428F8EC6B0B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C1C4067-A884-5233-1840-428F8EC6B0B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C1C4067-A884-5233-1840-428F8EC6B0B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C1C4067-A884-5233-1840-428F8EC6B0B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46EC48A6-B1DA-9AA7-2195-4ED441C67571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46EC48A6-B1DA-9AA7-2195-4ED441C67571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46EC48A6-B1DA-9AA7-2195-4ED441C67571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46EC48A6-B1DA-9AA7-2195-4ED441C67571}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
